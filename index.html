@@ -1,0 +1,19 @@
+<title>付款界面</title>
+<h5>您的余额是 <span id="amount">&&&amount&&&</span></h5>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<button id="button">付款</button>
+
+<script>
+    button.addElement
+    button.addEventListener('click',(e)=>{
+        $.ajax({
+            url:'http://wwwxyz.com:8002/pay',
+            dataType:"jsonp",
+            success:function(response){
+                if(response === 'success'){
+                    amount.innerText = amount.innerText - 1
+                }
+            }
+        })
+    })
+</script>
